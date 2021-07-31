@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CRM Test Suite]">
+  <listeners>
+    <listener class-name="com.qa.zoho.listeners.ExtentReportListener"/>
+  </listeners>
+  <test name="CRM Sanity Test(failed)">
+    <classes>
+      <class name="com.qa.zoho.tests.LoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyLoginPageTitleTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.zoho.tests.LoginPageTest -->
+    </classes>
+  </test> <!-- CRM Sanity Test(failed) -->
+</suite> <!-- Failed suite [CRM Test Suite] -->

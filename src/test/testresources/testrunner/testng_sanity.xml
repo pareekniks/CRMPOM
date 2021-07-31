@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="CRM Test Suite" verbose="1">
+
+	<listeners>
+	<listener class-name="com.qa.zoho.listeners.ExtentReportListener" 
+			/> <!-- 
+		<listener
+			class-name="com.qa.zoho.listeners.TestAllureListener" /> -->
+	</listeners>
+
+	<test name="CRM Sanity Test">
+		<classes>
+			<class name="com.qa.zoho.tests.LoginPageTest" />
+
+		</classes>
+	</test>
+
+
+</suite>

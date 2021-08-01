@@ -21,7 +21,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-@Listeners(TestAllureListener.class) //this listener added to add screenshot in case of any failures
+@Listeners(TestAllureListener.class) // this listener added to add screenshot in case of any failures
 public class LoginPageTest {
 
 	BasePage basePage;
@@ -38,7 +38,7 @@ public class LoginPageTest {
 		driver.get(prop.getProperty("url"));
 		loginPage = new LoginPage(driver);
 	}
-	
+
 	@Description("Verify login page title test.....")
 	@Severity(SeverityLevel.NORMAL)
 	@Test(priority = 1)
@@ -62,6 +62,7 @@ public class LoginPageTest {
 		loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 
 	}
+
 	@Description("Verify CRM LINK")
 	@Severity(SeverityLevel.TRIVIAL)
 	@Test(priority = 3)

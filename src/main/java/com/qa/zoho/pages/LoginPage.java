@@ -70,9 +70,9 @@ public class LoginPage extends BasePage {
 	}
 
 	public boolean verifyClassicCRMLink() {
-		
+
 		return elementUtil.isElementDisplayed(classicCRMLink, 10);
-		
+
 	}
 
 }

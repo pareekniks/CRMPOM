@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
+    <line>
+      <![CDATA[Starting verification of login page title.]]>
+    </line>
   </reporter-output>
-  <suite name="CRM Test Suite" duration-ms="13927" started-at="2021-07-30T21:09:00Z" finished-at="2021-07-30T21:09:14Z">
+  <suite name="CRM Test Suite" duration-ms="14862" started-at="2021-07-31T21:58:46Z" finished-at="2021-07-31T21:59:01Z">
     <groups>
     </groups>
-    <test name="CRM Sanity Test" duration-ms="13927" started-at="2021-07-30T21:09:00Z" finished-at="2021-07-30T21:09:14Z">
+    <test name="CRM Sanity Test" duration-ms="14862" started-at="2021-07-31T21:58:46Z" finished-at="2021-07-31T21:59:01Z">
       <class name="com.qa.zoho.tests.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.zoho.tests.LoginPageTest@5bb8f9e2]" name="setUp" is-config="true" duration-ms="6851" started-at="2021-07-31T02:39:00Z" finished-at="2021-07-31T02:39:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.zoho.tests.LoginPageTest@f3fcd59]" name="setUp" is-config="true" duration-ms="7514" started-at="2021-08-01T03:28:46Z" finished-at="2021-08-01T03:28:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.zoho.tests.LoginPageTest@5bb8f9e2]" name="verifyLoginPageTitleTest" duration-ms="106" started-at="2021-07-31T02:39:07Z" finished-at="2021-07-31T02:39:07Z">
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.zoho.tests.LoginPageTest@f3fcd59]" name="verifyLoginPageTitleTest" duration-ms="135" started-at="2021-08-01T03:28:54Z" finished-at="2021-08-01T03:28:54Z">
           <reporter-output>
+            <line>
+              <![CDATA[Starting verification of login page title.]]>
+            </line>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method status="PASS" signature="verifysignUpLinkTest()[pri:2, instance:com.qa.zoho.tests.LoginPageTest@5bb8f9e2]" name="verifysignUpLinkTest" duration-ms="3585" started-at="2021-07-31T02:39:07Z" finished-at="2021-07-31T02:39:11Z">
+        <test-method status="PASS" signature="verifysignUpLinkTest()[pri:2, instance:com.qa.zoho.tests.LoginPageTest@f3fcd59]" name="verifysignUpLinkTest" duration-ms="2597" started-at="2021-08-01T03:28:54Z" finished-at="2021-08-01T03:28:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifysignUpLinkTest -->
-        <test-method status="PASS" signature="verifyClassicCRMTest()[pri:3, instance:com.qa.zoho.tests.LoginPageTest@5bb8f9e2]" name="verifyClassicCRMTest" duration-ms="100" started-at="2021-07-31T02:39:11Z" finished-at="2021-07-31T02:39:11Z">
+        <test-method status="PASS" signature="verifyClassicCRMTest()[pri:3, instance:com.qa.zoho.tests.LoginPageTest@f3fcd59]" name="verifyClassicCRMTest" duration-ms="140" started-at="2021-08-01T03:28:57Z" finished-at="2021-08-01T03:28:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyClassicCRMTest -->
-        <test-method status="PASS" signature="verifyForgotPasswordTest()[pri:4, instance:com.qa.zoho.tests.LoginPageTest@5bb8f9e2]" name="verifyForgotPasswordTest" duration-ms="67" started-at="2021-07-31T02:39:11Z" finished-at="2021-07-31T02:39:11Z">
+        <test-method status="PASS" signature="verifyForgotPasswordTest()[pri:4, instance:com.qa.zoho.tests.LoginPageTest@f3fcd59]" name="verifyForgotPasswordTest" duration-ms="105" started-at="2021-08-01T03:28:57Z" finished-at="2021-08-01T03:28:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyForgotPasswordTest -->
-        <test-method status="PASS" signature="loginTest()[pri:5, instance:com.qa.zoho.tests.LoginPageTest@5bb8f9e2]" name="loginTest" duration-ms="1735" started-at="2021-07-31T02:39:11Z" finished-at="2021-07-31T02:39:13Z">
+        <test-method status="PASS" signature="loginTest()[pri:5, instance:com.qa.zoho.tests.LoginPageTest@f3fcd59]" name="loginTest" duration-ms="2668" started-at="2021-08-01T03:28:57Z" finished-at="2021-08-01T03:29:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.zoho.tests.LoginPageTest@5bb8f9e2]" name="tearDown" is-config="true" duration-ms="1235" started-at="2021-07-31T02:39:13Z" finished-at="2021-07-31T02:39:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.zoho.tests.LoginPageTest@f3fcd59]" name="tearDown" is-config="true" duration-ms="1473" started-at="2021-08-01T03:29:00Z" finished-at="2021-08-01T03:29:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

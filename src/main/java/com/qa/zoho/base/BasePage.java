@@ -25,8 +25,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
 
-	WebDriver driver;
-	Properties prop;
+	// WebDriver driver;
+	public Properties prop;
+	
+	public static ThreadLocal<WebDriver> tldriver = new ThreadLocal<WebDriver>();
+	
+	public static synchronized WebDriver getDriver() {
+		return tldriver.get();
+	}
 
 	/**
 	 * This method is used to initialize on the basis of browser name
@@ -41,19 +47,21 @@ public class BasePage {
 			chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 			WebDriverManager.chromedriver().setup();
 			chromeOptions.addArguments("--incognito");
-			driver = new ChromeDriver(chromeOptions);
+			tldriver.set(new ChromeDriver(chromeOptions));
+	
 
 		} else if (browserName.equals("ff")) {
 			WebDriverManager.firefoxdriver();
-			driver = new FirefoxDriver();
+			tldriver.set(new FirefoxDriver());
 		} else {
 			System.out.println(browserName + "Browser valeu wrong, provide correct browser");
 		}
 
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
+		
+		getDriver().manage().window().maximize();
+		getDriver().manage().deleteAllCookies();
 
-		return driver;
+		return getDriver();
 	}
 
 	/**
@@ -79,7 +87,7 @@ public class BasePage {
 	 * screenshot
 	 */
 	public String getScreenshot() {
-		File src = ((TakesScreenshot)init_driver("chrome")).getScreenshotAs(OutputType.FILE);
+		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);
 		try {

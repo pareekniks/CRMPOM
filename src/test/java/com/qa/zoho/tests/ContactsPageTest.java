@@ -47,7 +47,7 @@ public class ContactsPageTest {
 	@Test(dataProvider = "getContactsTestData")
 	public void createContactsTest(String firstName, String lastName, String eMail) throws InterruptedException {
 		contactsPage.createNewContact(firstName, lastName, eMail);
-		Assert.assertEquals(contactsPage.getContactName(), firstName + " "+lastName );
+		Assert.assertEquals(contactsPage.getContactName(), firstName + " " + lastName);
 
 	}
 

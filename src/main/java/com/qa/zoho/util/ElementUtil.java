@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ElementUtil {
 
 	WebDriver driver;
-	
 
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
@@ -111,7 +110,7 @@ public class ElementUtil {
 	 * @param driver
 	 * @param waitTime
 	 */
-	public void waitForElement(By locator,  int waitTime) {
+	public void waitForElement(By locator, int waitTime) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, waitTime);
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -194,20 +193,19 @@ public class ElementUtil {
 			System.out.println(e.getMessage());
 		}
 	}
-	
-	public void mouseClick( By locator) {
-		Actions act = new Actions(driver) ;
+
+	public void mouseClick(By locator) {
+		Actions act = new Actions(driver);
 		act.moveToElement(getElement(locator)).click().build().perform();
 	}
-	
+
 	public void pageRefresh() {
 		driver.navigate().to(driver.getCurrentUrl());
-		
+
 	}
-	
+
 	public void implicitWait(int time) {
 		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
 	}
-	
 
 }

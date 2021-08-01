@@ -18,7 +18,7 @@ public class ContactsPage extends BasePage {
 	By lastName = By.name("last_name");
 	By eMail = By.xpath("//input[@placeholder='Email address']");
 	By contactName = By.cssSelector(".light-black");
-	By firstContactName =By.xpath("(//td/a[text()])[1]");
+	By firstContactName = By.xpath("(//td/a[text()])[1]");
 
 	public ContactsPage(WebDriver driver) {
 		this.driver = driver;
@@ -29,24 +29,23 @@ public class ContactsPage extends BasePage {
 		elementUtil.waitForTitlePresent(Constants.CONTACTS_PAGE_TITLE, 10);
 	}
 
-	public void createNewContact( String FN, String LN, String mail) throws InterruptedException  {
+	public void createNewContact(String FN, String LN, String mail) throws InterruptedException {
 		Thread.sleep(5000);
 		elementUtil.waitForElement(createButton, 20);
 		elementUtil.doClick(createButton);
 		elementUtil.pageRefresh();
-		elementUtil.waitForElement(eMail,20);
-		elementUtil.doSendkeys(firstName,FN);
+		elementUtil.waitForElement(eMail, 20);
+		elementUtil.doSendkeys(firstName, FN);
 		elementUtil.doSendkeys(lastName, LN);
-		elementUtil.doSendkeys(eMail,  mail);
-		elementUtil.waitForElement(saveButton,  20);
-		elementUtil.mouseClick( saveButton);
-		elementUtil.waitForURL("-",  20);
+		elementUtil.doSendkeys(eMail, mail);
+		elementUtil.waitForElement(saveButton, 20);
+		elementUtil.mouseClick(saveButton);
+		elementUtil.waitForURL("-", 20);
 	}
-	
+
 	public String getContactName() {
 		elementUtil.waitForElement(contactName, 20);
 		return elementUtil.getTextOfElement(contactName);
 	}
-	
 
 }
